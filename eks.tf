@@ -1,11 +1,10 @@
 module "eks" {
-  #import the module template
   source = "terraform-aws-modules/eks/aws"
-  # version = "~> 20.31"
+  version = "~> 20.0"  
 
   #cluster info
   cluster_name = local.name
-  # cluster_version                = "1.31"
+  cluster_version                = "1.31"
   cluster_endpoint_public_access = true
 
   #VPC info
